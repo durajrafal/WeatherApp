@@ -1,0 +1,123 @@
+:root {
+  --bgcolor-start: #dbd5a4;
+  --bgcolor-end: #649173;
+  --bgcolor-middle: rgb(162, 181, 141);
+}
+
+@font-face {
+  font-family: Lato;
+  src: url('./../assets/Lato-Regular.ttf');
+  font-weight: 400 700;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url('./../assets/Lato-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url('./../assets/Lato-Black.ttf');
+  font-weight: 900;
+}
+
+html {
+  height: 100svh;
+  color: white;
+  font-family: Lato;
+}
+
+body {
+  background: #649173; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    var(--bgcolor-start),
+    var(--bgcolor-end)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(var(--bgcolor-start), var(--bgcolor-end));
+  margin: 0;
+}
+
+.material-icons-round.icon-2rem {
+  font-size: 2rem;
+}
+
+.flex-center-vertical {
+  display: flex;
+  align-items: center;
+}
+
+.flex-center-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.material-icons-round:hover {
+  transform: scale(1.2);
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+.font-2rem {
+  font-size: 2rem;
+}
+
+.font-3rem {
+  font-size: 3rem;
+}
+
+.error-message {
+  color: red;
+  text-transform: capitalize;
+}
+
+body > div:first-child {
+  padding-top: 20px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#location-input {
+  border: none;
+  background-color: transparent;
+  width: 0px;
+  color: white;
+  font-size: 1.5rem;
+  transition: width 0.4s ease-in-out;
+}
+
+#location-input:focus {
+  outline: none;
+  border-bottom: white 2px solid;
+  width: 20rem;
+}
+
+#location-input + button {
+  background: none;
+  border: none;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s linear 0.4s;
+}
+
+#location-input:focus + button {
+  opacity: 1;
+}
+
+body > div:not(:first-child) {
+  margin-top: 100px;
+}
