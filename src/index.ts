@@ -12,7 +12,6 @@ searchButton?.addEventListener('click', () => {
 });
 location?.addEventListener('keypress', (e) => {
   const keyEvent = e as KeyboardEvent;
-  console.log(keyEvent);
   if (keyEvent.key === 'Enter') {
     updateWeather(location?.value);
     location.blur();
