@@ -33,7 +33,6 @@ class DisplayManager {
   }
 
   private updateDisplayWithApiError(data: ApiError) {
-    console.log(this.errorMessage);
     this.errorMessage.textContent = data.message;
   }
 

@@ -111,7 +111,7 @@ body > div:first-child {
   border: none;
   color: white;
   opacity: 0;
-  transition: opacity 0.3s linear 0.4s;
+  transition: opacity 0.4s linear;
 }
 
 #location-input:focus + button {
