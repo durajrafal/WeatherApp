@@ -1,5 +1,4 @@
 import type { CurrentWeather, ApiError, ForecastWeather, ForecastDay } from '../types/apiTypes';
-import style from '../style.module.css';
 import '../extensionMethods';
 import forecastStyle from '../forecastStyles.module.css';
 
@@ -40,10 +39,10 @@ class DisplayManager {
 
   private updateDisplayWithForecastWeather(data: ForecastWeather) {
     const forecast = document.querySelector('[data-forecast]') as HTMLDivElement;
-    forecast.classList.add(style['flex-center-horizontal']);
-    forecast.classList.add(style['justify-content-space-evenly']);
-    forecast.classList.add(style['flex-wrap']);
-    forecast.classList.add(style['gap-10']);
+    forecast.classList.add('flex-center-horizontal');
+    forecast.classList.add('justify-content-space-evenly');
+    forecast.classList.add('flex-wrap');
+    forecast.classList.add('gap-10');
     data.forecast.forecastday.forEach((forecastday) => {
       forecast.appendChild(this.createForecastDaysWeather(forecastday));
     });
@@ -51,8 +50,8 @@ class DisplayManager {
 
   private createForecastDaysWeather(data: ForecastDay) {
     const parentDiv = document.createElement('div');
-    parentDiv.classList.add(style['flex-column']);
-    parentDiv.classList.add(style['flex-center-vertical']);
+    parentDiv.classList.add('flex-column');
+    parentDiv.classList.add('flex-center-vertical');
     parentDiv.classList.add(forecastStyle.forecastDay);
 
     const header = document.createElement('h3');
@@ -61,8 +60,8 @@ class DisplayManager {
     parentDiv.appendChild(header);
 
     const temperatureDiv = document.createElement('div');
-    temperatureDiv.classList.add(style['flex-center-vertical']);
-    temperatureDiv.classList.add(style['justify-content-space-between']);
+    temperatureDiv.classList.add('flex-center-vertical');
+    temperatureDiv.classList.add('justify-content-space-between');
     const icon = document.createElement('img');
     icon.src = data.day.condition.icon;
     icon.width = 32;
@@ -73,9 +72,9 @@ class DisplayManager {
     parentDiv.appendChild(temperatureDiv);
 
     const sunriseDiv = document.createElement('div');
-    sunriseDiv.classList.add(style['flex-center-vertical']);
-    sunriseDiv.classList.add(style['justify-content-space-between']);
-    sunriseDiv.classList.add(style['gap-10']);
+    sunriseDiv.classList.add('flex-center-vertical');
+    sunriseDiv.classList.add('justify-content-space-between');
+    sunriseDiv.classList.add('gap-10');
     const sunriseIcon = document.createElement('span');
     sunriseIcon.classList.add('material-icons-round');
     sunriseIcon.textContent = 'wb_twilight';
@@ -86,9 +85,9 @@ class DisplayManager {
     parentDiv.appendChild(sunriseDiv);
 
     const sunsetDiv = document.createElement('div');
-    sunsetDiv.classList.add(style['flex-center-vertical']);
-    sunsetDiv.classList.add(style['justify-content-space-between']);
-    sunsetDiv.classList.add(style['gap-10']);
+    sunsetDiv.classList.add('flex-center-vertical');
+    sunsetDiv.classList.add('justify-content-space-between');
+    sunsetDiv.classList.add('gap-10');
     const sunsetIcon = document.createElement('span');
     sunsetIcon.classList.add('material-icons-round');
     sunsetIcon.textContent = 'nightlight_round';
