@@ -58,6 +58,10 @@ body {
   flex-direction: column;
 }
 
+.justify-content-space-evenly {
+  justify-content: space-evenly;
+}
+
 .material-icons-round:hover {
   transform: scale(1.2);
 }
