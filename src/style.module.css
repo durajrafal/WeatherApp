@@ -62,7 +62,15 @@ body {
   justify-content: space-evenly;
 }
 
-.material-icons-round:hover {
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+label > .material-icons-round:hover {
   transform: scale(1.2);
 }
 
@@ -85,6 +93,14 @@ body {
 .error-message {
   color: red;
   text-transform: capitalize;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.gap-10 {
+  gap: 10px;
 }
 
 body > div:first-child {

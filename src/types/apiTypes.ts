@@ -37,8 +37,6 @@ export type ForecastDay = {
 type Day = {
   avgtemp_c: number;
   condition: Condition;
-  daily_chance_of_rain: number;
-  daily_chance_of_snow: number;
 };
 
 type Astro = {
