@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="main.js"></script>
+    <link href="./../src/style.module.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div>
+      <label for="location-input" class="flex-center-vertical">
+        <span class="material-icons-round icon-2rem"> travel_explore </span>
+      </label>
+      <span class="error-message" data-error-message>Error</span>
+      <input type="search" name="location" id="location-input" data-location />
+      <button type="button" class="flex-centered" data-search-btn>
+        <span class="material-icons-round icon-2rem"> start </span>
+      </button>
+    </div>
+
+    <div class="flex-center-vertical flex-center-horizontal flex-column">
+      <div class="flex-center-vertical font-black">
+        <img alt="Weather image" data-current-weather-img />
+        <output class="font-3rem" data-current-temperature></output>
+      </div>
+      <div>
+        <output class="font-2rem" data-current-location-city></output>
+      </div>
+      <div>
+        <output class="font-bold" data-current-location-country></output>
+      </div>
+    </div>
+
+    <div data-forecast></div>
+  </body>
+</html>
