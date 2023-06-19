@@ -19,6 +19,10 @@ class SearchManager {
     });
     this.client = apiClient;
     this.display = displayManager;
+
+    this.location?.addEventListener('focus', () => {
+      if (this.display.errorMessage) this.display.clearErrorMessage();
+    });
   }
 
   private updateWeather(location: string) {

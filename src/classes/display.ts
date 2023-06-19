@@ -20,8 +20,12 @@ class DisplayManager {
     this.errorMessage.textContent = 'Please enter location.';
   }
 
-  private updateDisplayWithCurrentWeather(data: CurrentWeather) {
+  public clearErrorMessage() {
     this.errorMessage.textContent = '';
+  }
+
+  private updateDisplayWithCurrentWeather(data: CurrentWeather) {
+    this.clearErrorMessage();
     data = data as CurrentWeather;
     const curTemp = document.querySelector('[data-current-temperature]') as HTMLOutputElement;
     const curLocationCity = document.querySelector(
