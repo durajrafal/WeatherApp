@@ -26,7 +26,6 @@ class SearchManager {
     else {
       this.location.value = '';
       this.location.blur();
-      //this.client.GetCurrentWeather(location).then((res) => this.display.updateDisplay(res));
       this.client.GetForecastWeather(location).then((res) => this.display.updateDisplay(res));
     }
   }

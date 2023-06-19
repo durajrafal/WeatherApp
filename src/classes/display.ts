@@ -39,10 +39,7 @@ class DisplayManager {
 
   private updateDisplayWithForecastWeather(data: ForecastWeather) {
     const forecast = document.querySelector('[data-forecast]') as HTMLDivElement;
-    forecast.classList.add('flex-center-horizontal');
-    forecast.classList.add('justify-content-space-evenly');
-    forecast.classList.add('flex-wrap');
-    forecast.classList.add('gap-10');
+    forecast.textContent = '';
     data.forecast.forecastday.forEach((forecastday) => {
       forecast.appendChild(this.createForecastDaysWeather(forecastday));
     });
